@@ -5,5 +5,6 @@ export default defineConfig({
   plugins: [
     React(),
     tailwindcss(),
+    base: "/Hagz909.github.io"
   ],
 })
