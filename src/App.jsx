@@ -19,7 +19,7 @@ function App() {
           {/* class button download dan lihat cv */}
           <div className="flex items-center sm:gap-4 gap-2">
           {/* tombol download cv */}
-            <a href="#" className="bg-cyan-600 p-4 rounded-2xl hover:bg-cyan-500">Download CV<i className="ri-download-cloud-fill p-2 ri-lg"></i></a>
+            <a href="https://docs.google.com/document/d/1zD5hPeqhb6Hhp4UQUATQi5eSrZu0U2RGDuqToOnF3ho/edit?usp=drive_link" className="bg-cyan-600 p-4 rounded-2xl hover:bg-cyan-500">Download CV<i className="ri-download-cloud-fill p-2 ri-lg"></i></a>
           {/* tombol lihat proyek */}
             <a href="#proyek"className="bg-blue-600 p-4 rounded-2xl hover:bg-blue-500">Lihat Proyek< i class="ri-eye-fill p-2 ri-lg"></i></a>
           </div>
@@ -56,7 +56,7 @@ function App() {
           <div className="flex items-center gap-6">
               <div>
                <h1 className="text-4xl mb-1">
-               45<span className="text-cyan-500">+</span>
+               10<span className="text-cyan-500">+</span>
                </h1>
                <p>Proyek Selesai</p>
               </div>
@@ -65,6 +65,10 @@ function App() {
                4<span className="text-blue-500">+</span>
                </h1>
                <p>Tahun Pengalaman</p>
+              </div>
+              <div className="flex items-center sm:gap-4 gap-2">
+                {/* tombol lihat proyek */}
+               <a href="https://www.linkedin.com/in/muhammad-ilham-musyaffa-81a851299/?skipRedirect=true" target="_blank" rel="noopener noreferrer" className="bg-blue-600 p-4 rounded-2xl hover:bg-blue-500">Kunjungi Linkedln<i class="ri-linkedin-box-fill p-2 ri-lg"></i></a>
               </div>
             </div>
           </div>
@@ -94,6 +98,35 @@ function App() {
       </div>  
       {/* TENTANG */}
 
+      {/* Hobby  */}
+      <div className="proyek mt-32 py-10" id="proyek">
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Hobi</h1>
+        <p className="text-base/loose text-center opacity-50" 
+         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+          Berikut ini adalah Hobi yang saya sukai</p>
+        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listProyek.map(proyek => (
+           <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad} data-aos-once="true">
+            <img src={proyek.gambar} alt="Proyek Image"loading="lazy"/>
+            <div>
+              <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
+              <p className="text-base/loose mb-4">{proyek.desk}</p>
+              <div className="flex flex-warp gap-2">
+                {proyek.tools.map((tool, index) => (
+                  <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
+                border-zinc-600 hover:bg-blue-600">Lihat lebih lanjut</a>
+              </div>
+            </div>
+           </div>
+          ))}
+        </div>
+      </div>
+      {/* Hobby */}
+
       {/* Proyek */}
       <div className="proyek mt-32 py-10" id="proyek">
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Proyek</h1>
@@ -122,6 +155,35 @@ function App() {
         </div>
       </div>
       {/* Proyek */}
+
+      {/* pengalaman */}
+      <div className="proyek mt-32 py-10" id="proyek">
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Pengalaman</h1>
+        <p className="text-base/loose text-center opacity-50" 
+         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+          Berikut ini adalah beberapa Pengalaman yang saya lampaui</p>
+        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listProyek.map(proyek => (
+           <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad} data-aos-once="true">
+            <img src={proyek.gambar} alt="Proyek Image"loading="lazy"/>
+            <div>
+              <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
+              <p className="text-base/loose mb-4">{proyek.desk}</p>
+              <div className="flex flex-warp gap-2">
+                {proyek.tools.map((tool, index) => (
+                  <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
+                border-zinc-600 hover:bg-blue-600">Lihat Website</a>
+              </div>
+            </div>
+           </div>
+          ))}
+        </div>
+      </div>
+      {/* Pengalaman */}
 
       {/* Kontak */}
       <div className="kontak mt-32 sm:p-10 p-0" id="kontak">

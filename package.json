@@ -1,6 +1,5 @@
 {
   "name": "react-portfolio",
-  "homepage": "https://Hagz909.github.io/Hagz909.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +15,7 @@
     "aos": "^3.0.0-beta.6",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-icons": "^5.6.0",
     "remixicon": "^4.9.1",
     "tailwindcss": "^4.2.4"
   },
