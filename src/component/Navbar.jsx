@@ -47,6 +47,10 @@ const Navbar = () => {
                 <li>
                     <a href="#proyek" className="sm:text-lg text-base font-medium">Proyek</a>
                 </li>
+                {/*navbar prestasi */}
+                <li>
+                    <a href="#prestasi" className="sm:text-lg text-base font-medium">Prestasi</a>
+                </li>
                 {/* navbar kontak */}
                 <li>
                     <a href="#kontak" className="sm:text-lg text-base font-medium">Kontak</a>

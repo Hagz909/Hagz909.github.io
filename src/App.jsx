@@ -1,6 +1,6 @@
 import DataImage from "./data";
 // import data gambar dari file data.js
-import { listTools, listProyek } from "./data";
+import { listTools, listHobi, listProyek, listPengalaman, listPrestasi } from "./data";
 // import file gambar tools dan proyek dari data >assets
 
 // step hero section
@@ -99,20 +99,20 @@ function App() {
       {/* TENTANG */}
 
       {/* Hobby  */}
-      <div className="proyek mt-32 py-10" id="proyek">
+      <div className="hobi mt-32 py-10" id="hobi">
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Hobi</h1>
         <p className="text-base/loose text-center opacity-50" 
          data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
           Berikut ini adalah Hobi yang saya sukai</p>
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listProyek.map(proyek => (
-           <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad} data-aos-once="true">
-            <img src={proyek.gambar} alt="Proyek Image"loading="lazy"/>
+        <div className="hobi-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listHobi.map(hobi => (
+           <div key={hobi.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={hobi.dad} data-aos-once="true">
+            <img src={hobi.gambar} alt="Hobi Image"loading="lazy"/>
             <div>
-              <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
-              <p className="text-base/loose mb-4">{proyek.desk}</p>
+              <h1 className="text-2xl font-bold my-4">{hobi.nama}</h1>
+              <p className="text-base/loose mb-4">{hobi.desk}</p>
               <div className="flex flex-warp gap-2">
-                {proyek.tools.map((tool, index) => (
+                {hobi.tools.map((tool, index) => (
                   <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
                 ))}
               </div>
@@ -126,6 +126,35 @@ function App() {
         </div>
       </div>
       {/* Hobby */}
+
+      {/* Prestasi  */}
+      <div className="prestasi mt-32 py-10" id="prestasi">
+        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">prestasi</h1>
+        <p className="text-base/loose text-center opacity-50" 
+         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+          Berikut ini adalah Hobi yang saya sukai</p>
+        <div className="prestasi-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listPrestasi.map(prestasi => (
+           <div key={prestasi.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={prestasi.dad} data-aos-once="true">
+            <img src={prestasi.gambar} alt="Prestasi Image"loading="lazy"/>
+            <div>
+              <h1 className="text-2xl font-bold my-4">{prestasi.nama}</h1>
+              <p className="text-base/loose mb-4">{prestasi.desk}</p>
+              <div className="flex flex-warp gap-2">
+                {prestasi.tools.map((tool, index) => (
+                  <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
+                border-zinc-600 hover:bg-blue-600">Lihat lebih lanjut</a>
+              </div>
+            </div>
+           </div>
+          ))}
+        </div>
+      </div>
+      {/* Prestasi */}
 
       {/* Proyek */}
       <div className="proyek mt-32 py-10" id="proyek">
@@ -157,26 +186,26 @@ function App() {
       {/* Proyek */}
 
       {/* pengalaman */}
-      <div className="proyek mt-32 py-10" id="proyek">
+      <div className="pengalaman mt-32 py-10" id="pengalaman">
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Pengalaman</h1>
         <p className="text-base/loose text-center opacity-50" 
          data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
           Berikut ini adalah beberapa Pengalaman yang saya lampaui</p>
-        <div className="proyek-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listProyek.map(proyek => (
-           <div key={proyek.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad} data-aos-once="true">
-            <img src={proyek.gambar} alt="Proyek Image"loading="lazy"/>
+        <div className="pengalaman-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+          {listPengalaman.map(pengalaman => (
+           <div key={pengalaman.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={pengalaman.dad} data-aos-once="true">
+            <img src={pengalaman.gambar} alt="Pengalaman Image"loading="lazy"/>
             <div>
-              <h1 className="text-2xl font-bold my-4">{proyek.nama}</h1>
-              <p className="text-base/loose mb-4">{proyek.desk}</p>
+              <h1 className="text-2xl font-bold my-4">{pengalaman.nama}</h1>
+              <p className="text-base/loose mb-4">{pengalaman.desk}</p>
               <div className="flex flex-warp gap-2">
-                {proyek.tools.map((tool, index) => (
+                {pengalaman.tools.map((tool, index) => (
                   <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
                 ))}
               </div>
               <div className="mt-8 text-center">
                 <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
-                border-zinc-600 hover:bg-blue-600">Lihat Website</a>
+                border-zinc-600 hover:bg-blue-600">Alamat Tempat kerja</a>
               </div>
             </div>
            </div>
