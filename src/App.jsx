@@ -1,6 +1,6 @@
 import DataImage from "./data";
 // import data gambar dari file data.js
-import { listTools, listHobi, listProyek, listPengalaman, listPrestasi } from "./data";
+import { listTools, listProyek } from "./data";
 // import file gambar tools dan proyek dari data >assets
 
 // step hero section
@@ -14,7 +14,7 @@ function App() {
           <q>kode yang indah berawal dari npm run dev.⚡</q>
           </div>
           <h1 className="text-5xl/tight font-bold mb-6">Nyuwun Sewu.. kulo, Muhammad Ilham Musyaffa</h1>
-          <p className="text-base/loose mb-6 opacity-50">Saya mempunyai ketertarikan dalam bidang Programming dan Designer, terutama pada pembuatan Website dan Desain seperti Poster, Pamflet serta Banner, ketertarikan pada bidang ini sudah berlangsung lebih dari 4 Tahun untuk semua Bidang.
+          <p className="text-base/loose mb-6 opacity-50">Saya mempunyai ketertarikan dalam bidang Programming dan Designer, terutama pada pembuatan Website dan Desain seperti Poster, Pamflet serta Banner, ketertarikan pada bidang ini sudah berlangsung lebih dari 2 Tahun untuk semua Bidang.
           </p>
           {/* class button download dan lihat cv */}
           <div className="flex items-center sm:gap-4 gap-2">
@@ -74,6 +74,42 @@ function App() {
           </div>
         </div>
 
+        {/* TENTANG2 */}
+      <div className="tentang2 mt-32 py-10" id="tentang2">
+        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">  
+          <img src={DataImage.HarkatImage} alt="Image2"className="w-12 rounded-md mb-10
+          sm:hidden" loading="lazy"/>
+          <p className="text-base/loose mb-10">
+            Saya sedang menempuh pendidikan di Universitas Harkat negri 
+            prodi S1 Teknik Informatika fakultas Sains Teknologi
+            ,semester saat ini saya di semester 4, project ini salah
+            satu mata kuliah saya yaitu web semantic untuk keperluan uts 
+          </p>
+          <div className="flex items-center justify-between">
+           <img src= {DataImage.HarkatImage} alt="Image2" className="w-12 rounded-md sm:block
+           hidden" loading="lazy"/>
+          <div className="flex items-center gap-6">
+              <div>
+               <h1 className="text-4xl mb-1">
+               <span className="text-cyan-500">8</span>
+               </h1>
+               <p>Semester</p>
+              </div>
+              <div>
+               <h1 className="text-4xl mb-1">
+               <span className="text-blue-500">224225045</span>
+               </h1>
+               <p>NIM</p>
+              </div>
+              <div className="flex items-center sm:gap-4 gap-2">
+                {/* tombol lihat proyek */}
+               <a href="http://harkatnegeri.ac.id/" target="_blank" rel="noopener noreferrer" className="bg-blue-600 p-4 rounded-2xl hover:bg-blue-500">Lihat Kampus<i></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
         <div className="tools mt-32">
           <h1 className="text-4xl/snug font-bold b-4" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Tools yang dipakai</h1>
           <p className="xl:w-2/5 md:w-2/4 md:w-2/3 sm:3/4 w-full text-base/loose opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">Berikut ini beberapa Tools yang biasa saya pakai untuk pembuatan Website atau Design</p>
@@ -98,64 +134,6 @@ function App() {
       </div>  
       {/* TENTANG */}
 
-      {/* Hobby  */}
-      <div className="hobi mt-32 py-10" id="hobi">
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Hobi</h1>
-        <p className="text-base/loose text-center opacity-50" 
-         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
-          Berikut ini adalah Hobi yang saya sukai</p>
-        <div className="hobi-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listHobi.map(hobi => (
-           <div key={hobi.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={hobi.dad} data-aos-once="true">
-            <img src={hobi.gambar} alt="Hobi Image"loading="lazy"/>
-            <div>
-              <h1 className="text-2xl font-bold my-4">{hobi.nama}</h1>
-              <p className="text-base/loose mb-4">{hobi.desk}</p>
-              <div className="flex flex-warp gap-2">
-                {hobi.tools.map((tool, index) => (
-                  <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
-                ))}
-              </div>
-              <div className="mt-8 text-center">
-                <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
-                border-zinc-600 hover:bg-blue-600">Lihat lebih lanjut</a>
-              </div>
-            </div>
-           </div>
-          ))}
-        </div>
-      </div>
-      {/* Hobby */}
-
-      {/* Prestasi  */}
-      <div className="prestasi mt-32 py-10" id="prestasi">
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">prestasi</h1>
-        <p className="text-base/loose text-center opacity-50" 
-         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
-          Berikut ini adalah Hobi yang saya sukai</p>
-        <div className="prestasi-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listPrestasi.map(prestasi => (
-           <div key={prestasi.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={prestasi.dad} data-aos-once="true">
-            <img src={prestasi.gambar} alt="Prestasi Image"loading="lazy"/>
-            <div>
-              <h1 className="text-2xl font-bold my-4">{prestasi.nama}</h1>
-              <p className="text-base/loose mb-4">{prestasi.desk}</p>
-              <div className="flex flex-warp gap-2">
-                {prestasi.tools.map((tool, index) => (
-                  <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
-                ))}
-              </div>
-              <div className="mt-8 text-center">
-                <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
-                border-zinc-600 hover:bg-blue-600">Lihat lebih lanjut</a>
-              </div>
-            </div>
-           </div>
-          ))}
-        </div>
-      </div>
-      {/* Prestasi */}
-
       {/* Proyek */}
       <div className="proyek mt-32 py-10" id="proyek">
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Proyek</h1>
@@ -175,8 +153,16 @@ function App() {
                 ))}
               </div>
               <div className="mt-8 text-center">
-                <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
-                border-zinc-600 hover:bg-blue-600">Lihat Website</a>
+                <a href="https://github.com/Hagz909/Hagz909.github.io" className="bg-cyan-700 p-3 rounded-lg block border
+                border-zinc-600 hover:bg-blue-600">Lihat Website portfolio</a>
+              </div>
+              <div className="mt-8 text-center">
+                <a href="https://github.com/Hagz909/WebVapingEcomerce" className="bg-cyan-700 p-3 rounded-lg block border
+                border-zinc-600 hover:bg-blue-600">Lihat Website vaping</a>
+              </div>
+              <div className="mt-8 text-center">
+                <a href="https://github.com/Hagz909/JavaAPPcashier" className="bg-cyan-700 p-3 rounded-lg block border
+                border-zinc-600 hover:bg-blue-600">Lihat java project</a>
               </div>
             </div>
            </div>
@@ -184,35 +170,6 @@ function App() {
         </div>
       </div>
       {/* Proyek */}
-
-      {/* pengalaman */}
-      <div className="pengalaman mt-32 py-10" id="pengalaman">
-        <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Pengalaman</h1>
-        <p className="text-base/loose text-center opacity-50" 
-         data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
-          Berikut ini adalah beberapa Pengalaman yang saya lampaui</p>
-        <div className="pengalaman-box mt-14 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-          {listPengalaman.map(pengalaman => (
-           <div key={pengalaman.id} className="p-4 bg-zinc-800 rounded-md" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={pengalaman.dad} data-aos-once="true">
-            <img src={pengalaman.gambar} alt="Pengalaman Image"loading="lazy"/>
-            <div>
-              <h1 className="text-2xl font-bold my-4">{pengalaman.nama}</h1>
-              <p className="text-base/loose mb-4">{pengalaman.desk}</p>
-              <div className="flex flex-warp gap-2">
-                {pengalaman.tools.map((tool, index) => (
-                  <p className="py-1 px-3 border border-zinc-500 bg-zinc-600 rounded-md font-semibold" key={index}>{tool}</p>
-                ))}
-              </div>
-              <div className="mt-8 text-center">
-                <a href="#" className="bg-cyan-700 p-3 rounded-lg block border
-                border-zinc-600 hover:bg-blue-600">Alamat Tempat kerja</a>
-              </div>
-            </div>
-           </div>
-          ))}
-        </div>
-      </div>
-      {/* Pengalaman */}
 
       {/* Kontak */}
       <div className="kontak mt-32 sm:p-10 p-0" id="kontak">
